@@ -1,0 +1,98 @@
+
+//+------------------------------------------------------------------+
+//|                                             Legend Wall Street MT5|
+//|                            Developer's Site: forexroboteasy.com   |
+//|                                 Development by: Forex Robot Easy Team|
+//+------------------------------------------------------------------+
+
+// Define input parameters
+input int TradingHours = 8; // Number of hours for the EA to trade
+input int StartHour = 0; // Start hour for the EA to trade
+input int EndHour = 23; // End hour for the EA to trade
+input int MagicNumber = 123456; // Unique number for EA's positions
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+   // Set specified trading hours
+   if (TimeHour(TimeCurrent()) < StartHour || TimeHour(TimeCurrent()) > EndHour)
+   {
+      Print('EA is not allowed to trade during specified hours.');
+      return INIT_FAILED;
+   }
+   
+   // Initialize other necessary features and indicators
+   // ...
+   
+   return INIT_SUCCEEDED;
+}
+
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // Wait for confirmation signal from high or low price levels
+   // ...
+   
+   // Open positions based on set parameters
+   // ...
+   
+   // Close positions by take profit or Fibo level
+   // ...
+   
+   // Manage manual orders if settings allow it
+   // ...
+   
+   // Buy and sell simultaneously using hedge feature
+   // ...
+   
+   // Check for specified trading hours
+   if (TimeHour(TimeCurrent()) < StartHour || TimeHour(TimeCurrent()) > EndHour)
+   {
+      // Close all positions
+      // ...
+      
+      // Provide feedback to user
+      Print('EA has closed all positions as per specified trading hours.');
+   }
+}
+
+//+------------------------------------------------------------------+
+//| Custom functions                                                 |
+//+------------------------------------------------------------------+
+
+// Function to identify potential market reversals using dynamic Fibo zones
+// ...
+// ...
+
+// Function to open positions based on set parameters
+// ...
+// ...
+
+// Function to close positions by Fibo level
+// ...
+// ...
+
+// Function to manage manual orders
+// ...
+// ...
+
+// Function to buy and sell simultaneously (hedge feature)
+// ...
+// ...
+
+//+------------------------------------------------------------------+
+//| Custom indicators                                                |
+//+------------------------------------------------------------------+
+
+// Indicator for confirmation signal from high or low price levels
+// ...
+// ...
+
+// Indicator for take profit level
+// ...
+// ...
+
